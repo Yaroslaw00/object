@@ -33,23 +33,45 @@
 
 // Створіть об'єкт "weather" з властивостями "temperature", "humidity", "windSpeed". Додайте до об'єкту метод, який повертає "true", якщо температура нижче 0 градусів Цельсія, та "false", якщо температура вище або рівна 0 градусів Цельсія. Температуру потрібно отримати з prompt(). Якщо метод повернув "true" вивести повідомлення “температура нижче 0 градусів Цельсія” і навпаки
 
-const weather = {
-  temperature: 11,
-  humidity: 0.7,
-  windSpeed: 3.5,
-  gradCelcius(grad) {
-    if (grad < 0) {
-      return true;
-    } else if (grad == 0) {
-      return "Температура 0 градусів";
-    } else {
-      return false;
+// const weather = {
+//   temperature: 11,
+//   humidity: 0.7,
+//   windSpeed: 3.5,
+//   gradCelcius(grad) {
+//     if (grad < 0) {
+//       return true;
+//     } else if (grad == 0) {
+//       return "Температура 0 градусів";
+//     } else {
+//       return false;
+//     }
+//   },
+// };
+// const usetemp = Number(prompt("Введіть температуру вашої погоди"));
+// if (weather.gradCelcius(usetemp)) {
+//   console.log("Температура нище 0 aбо 0");
+// } else {
+//   console.log("Температура вище 0");
+// }
+function BigMoney(object) {
+  let biggestpodatok = 0;
+  let profession = "";
+  const allkeys = Object.keys(object);
+  for (const key of allkeys) {
+    if (object[key] > biggestpodatok) {
+      profession = key;
+      biggestpodatok = object[key];
     }
-  },
-};
-const usetemp = Number(prompt("Введіть температуру вашої погоди"));
-if (weather.gradCelcius(usetemp)) {
-  console.log("Температура нище 0 aбо 0");
-} else {
-  console.log("Температура вище 0");
+  }
+
+  return profession;
 }
+
+const zarplata = {
+  buhalter: 27500,
+  derector: 65000,
+  robitniki: 32500,
+  arhitector: 37500,
+};
+const richest = BigMoney(zarplata);
+console.log(richest);
