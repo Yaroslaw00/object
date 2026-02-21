@@ -31,6 +31,29 @@
 
 // }
 
+// function BigMoney(object) {
+//   let biggestpodatok = 0;
+//   let profession = "";
+//   const allkeys = Object.keys(object);
+//   for (const key of allkeys) {
+//     if (object[key] > biggestpodatok) {
+//       profession = key;
+//       biggestpodatok = object[key];
+//     }
+//   }
+
+//   return profession;
+// }
+
+// const zarplata = {
+//   buhalter: 27500,
+//   derector: 65000,
+//   robitniki: 32500,
+//   arhitector: 37500,
+// };
+// const richest = BigMoney(zarplata);
+// console.log(richest);
+
 // Створіть об'єкт "weather" з властивостями "temperature", "humidity", "windSpeed". Додайте до об'єкту метод, який повертає "true", якщо температура нижче 0 градусів Цельсія, та "false", якщо температура вище або рівна 0 градусів Цельсія. Температуру потрібно отримати з prompt(). Якщо метод повернув "true" вивести повідомлення “температура нижче 0 градусів Цельсія” і навпаки
 
 // const weather = {
@@ -53,25 +76,37 @@
 // } else {
 //   console.log("Температура вище 0");
 // }
-function BigMoney(object) {
-  let biggestpodatok = 0;
-  let profession = "";
-  const allkeys = Object.keys(object);
-  for (const key of allkeys) {
-    if (object[key] > biggestpodatok) {
-      profession = key;
-      biggestpodatok = object[key];
+
+// const money = prompt("Поповніть рахунок");
+// const bankAccount = {
+//   ownerName: "Yaroslav",
+//   accountNumber: 347547,
+//   balance: 92500,
+
+//   deposit(sum) {
+//     if (this.balance >= money) {
+//       this.balance += sum;
+//       return sum;
+//     } else {
+//       console.log("ой щось пішло не так");
+//     }
+//     console.log(sum);
+//   },
+// };
+
+const user = {
+  name: "Yarik",
+  email: "yaro901@gmail.com",
+  password: "parol228",
+
+  login(inputEmail, inputPassword) {
+    if (this.email === inputEmail && this.password === inputPassword) {
+      console.log("Перевірка пройдена");
+    } else {
+      console.log("Перевірка не пройдена");
     }
-  }
-
-  return profession;
-}
-
-const zarplata = {
-  buhalter: 27500,
-  derector: 65000,
-  robitniki: 32500,
-  arhitector: 37500,
+  },
 };
-const richest = BigMoney(zarplata);
-console.log(richest);
+
+// Перевірка
+user.login("yaro901@gmail.com", "parol228"); // Перевірка пройдена
