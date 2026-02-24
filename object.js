@@ -77,22 +77,25 @@
 //   console.log("Температура вище 0");
 // }
 
-// const money = prompt("Поповніть рахунок");
-// const bankAccount = {
-//   ownerName: "Yaroslav",
-//   accountNumber: 347547,
-//   balance: 92500,
+const money = prompt("Поповніть рахунок");
+const bankAccount = {
+  ownerName: "Yaroslav",
+  accountNumber: 347547,
+  balance: 92500,
 
-//   deposit(sum) {
-//     if (this.balance >= money) {
-//       this.balance += sum;
-//       return sum;
-//     } else {
-//       console.log("ой щось пішло не так");
-//     }
-//     console.log(sum);
-//   },
-// };
+  deposit(sum) {
+    this.balance += sum;
+    return this.balance;
+  },
+  withdraw(sum) {
+    if (this.balance > sum) {
+      this.balance -= sum;
+      return this.balance;
+    } else {
+      console.log("Ой помилочка");
+    }
+  },
+};
 
 const user = {
   name: "Yarik",
