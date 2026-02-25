@@ -77,39 +77,61 @@
 //   console.log("Температура вище 0");
 // }
 
-const money = prompt("Поповніть рахунок");
-const bankAccount = {
-  ownerName: "Yaroslav",
-  accountNumber: 347547,
-  balance: 92500,
+// Створіть об'єкт "bankAccount" з властивостями "ownerName", "accountNumber", "balance". Додайте до об'єкту метод "deposit", який дозволяє додавати гроші на рахунок, та метод "withdraw", який дозволяє знімати гроші з рахунку. Використайте cofirm() щоб поповнити рахунок або отримати готівку та prompt() щоб дізнатися сумму. Після проведення операції виводити повідомлення про залишок на рахунку.
 
-  deposit(sum) {
-    this.balance += sum;
-    return this.balance;
-  },
-  withdraw(sum) {
-    if (this.balance > sum) {
-      this.balance -= sum;
-      return this.balance;
+// const money = prompt("Поповніть рахунок");
+// const bankAccount = {
+//   ownerName: "Yaroslav",
+//   accountNumber: 347547,
+//   balance: 92500,
+
+//   deposit(sum) {
+//     this.balance += sum;
+//     return this.balance;
+//   },
+//   withdraw(sum) {
+//     if (this.balance > sum) {
+//       this.balance -= sum;
+//       return this.balance;
+//     } else {
+//       console.log("Ой помилочка");
+//     }
+//   },
+// };
+
+// Створіть об’єкт "user", який буде мати властивості "name", "email", "password". Додайте метод "login", який буде перевіряти правильність введеного email та password.
+
+// const user = {
+//   name: "Yarik",
+//   email: "yaro901@gmail.com",
+//   password: "parol228",
+
+//   login(inputEmail, inputPassword) {
+//     if (this.email === inputEmail && this.password === inputPassword) {
+//       console.log("Перевірка пройдена");
+//     } else {
+//       console.log("Перевірка не пройдена");
+//     }
+//   },
+// };
+
+// // Перевірка
+// user.login("yaro901@gmail.com", "parol228"); // Перевірка пройдена
+
+// Створіть об'єкт "movie" з властивостями "title", "director", "year", "rating". Додайте до об'єкту метод, який повертає "true", якщо рейтинг фільму вище 8, та "false", якщо рейтинг фільму 8 або нижче. Вивести значення властивостей в консоль.
+
+const movie = {
+  title: "SpiderMan",
+  director: "Bob",
+  year: 2019,
+  rating: 7,
+
+  ranking() {
+    if (this.rating >= 8) {
+      return true;
     } else {
-      console.log("Ой помилочка");
+      return false;
     }
   },
 };
-
-const user = {
-  name: "Yarik",
-  email: "yaro901@gmail.com",
-  password: "parol228",
-
-  login(inputEmail, inputPassword) {
-    if (this.email === inputEmail && this.password === inputPassword) {
-      console.log("Перевірка пройдена");
-    } else {
-      console.log("Перевірка не пройдена");
-    }
-  },
-};
-
-// Перевірка
-user.login("yaro901@gmail.com", "parol228"); // Перевірка пройдена
+console.log(movie.ranking());
