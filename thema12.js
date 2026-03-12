@@ -15,32 +15,61 @@
 // for (const key of keys) {
 //   console.log(`${key}:${user[key]}`);
 // }
+
+// Завдання 2
+const user = {
+  name: "Ivan",
+  age: 20,
+  city: "Kyiv",
+};
+
+function countProps(obj) {
+  return Object.keys(obj).length;
+}
+console.log(countProps(user));
 // Завдання 3
 // Напиши функцію findBestEmployee(employees), яка приймає об'єкт співробітників і повертає ім'я найпродуктивнішого (який виконав більше всіх задач). Співробітники і кількість виконаних завдань містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
 
-const employeeTasks = {
-  Олександр: 12,
-  Марія: 25,
-  Андрій: 8,
-  Олена: 19,
-};
+// const employeeTasks = {
+//   Олександр: 12,
+//   Марія: 25,
+//   Андрій: 8,
+//   Олена: 19,
+// };
 
-function findBestEmployee(employees) {
-  let bestEmployer = "";
-  let completeTasks = 0;
-  for (const key in employees) {
-    const value = employees[key];
-    console.log(key, value);
-    if (value > completeTasks) {
-      bestEmployer = key;
-      completeTasks = value;
-    }
+// function findBestEmployee(employees) {
+//   let bestEmployer = "";
+//   let completeTasks = 0;
+//   for (const key in employees) {
+//     const value = employees[key];
+//     console.log(key, value);
+//     if (value > completeTasks) {
+//       bestEmployer = key;
+//       completeTasks = value;
+//     }
+//   }
+
+//   return bestEmployer;
+// }
+// const foundthebest = findBestEmployee(employeeTasks);
+// console.log(foundthebest);
+// Завдання 4
+const employees = {
+  Ivan: 1000,
+  Anna: 1600,
+  Petro: 1300,
+};
+function countTotalSalary(employees) {
+  let total = 0;
+
+  for (const salary of Object.values(employees)) {
+    total += salary;
   }
 
-  return bestEmployer;
+  return total;
 }
-const foundthebest = findBestEmployee(employeeTasks);
-console.log(foundthebest);
+
+console.log(countTotalSalary(employees)); // 3900
 // // Завдання 5
 // function getAllPropValues(arr, prop) {
 //   const result = [];
