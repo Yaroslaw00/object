@@ -1,20 +1,46 @@
 // Завдання 1
-const user = {
-  hobby: "basketball",
-  premium: true,
+// const user = {
+//   hobby: "basketball",
+//   premium: true,
+// };
+
+// user.mood = "happy";
+
+// user.hobby = "skydiving";
+
+// user.premium = false;
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key}:${user[key]}`);
+// }
+// Завдання 3
+// Напиши функцію findBestEmployee(employees), яка приймає об'єкт співробітників і повертає ім'я найпродуктивнішого (який виконав більше всіх задач). Співробітники і кількість виконаних завдань містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
+
+const employeeTasks = {
+  Олександр: 12,
+  Марія: 25,
+  Андрій: 8,
+  Олена: 19,
 };
 
-user.mood = "happy";
+function findBestEmployee(employees) {
+  let bestEmployer = "";
+  let completeTasks = 0;
+  for (const key in employees) {
+    const value = employees[key];
+    console.log(key, value);
+    if (value > completeTasks) {
+      bestEmployer = key;
+      completeTasks = value;
+    }
+  }
 
-user.hobby = "skydiving";
-
-user.premium = false;
-
-const keys = Object.keys(user);
-
-for (const key of keys) {
-  console.log(`${key}:${user[key]}`);
+  return bestEmployer;
 }
+const foundthebest = findBestEmployee(employeeTasks);
+console.log(foundthebest);
 // // Завдання 5
 // function getAllPropValues(arr, prop) {
 //   const result = [];
